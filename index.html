@@ -1,67 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/style.css"
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="./assets/script.js"></script>
-  
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+
     <title>Astro music</title>
 </head>
+
 <body>
     <header>
         <h2>Astro music</h2>
- 
-    <nav>
-  
-        <div class="nav-items">
-            <a href="/">Browse</a>
-            <a href="/">Form</a>
 
-        </div>
+        <nav>
 
-    </nav>
-</header>
-<section>
-    <div class="signs-container">
-        <div id="signs">
-          <button id="aquarius"><img src="aquarius.png"></button> 
-          <button id="cancer"><img src="aquarius.png"></button> 
-          <button id="taurus"><img src="aquarius.png"></button> 
-          <button id="leo"><img src="aquarius.png"></button> 
-          <button id="aries"><img src="aquarius.png"></button> 
-          <button id="virgo"><img src="aquarius.png"></button> 
-          <button id="scorpio"><img src="aquarius.png"></button> 
-          <button id="saggittarius"><img src="aquarius.png"></button> 
-          <button id="pisces"><img src="aquarius.png"></button> 
-          <button id="gemini"><img src="aquarius.png"></button> 
-          <button id="capricorn"><img src="aquarius.png"></button> 
-          <button id="libra"><img src="aquarius.png"></button> 
+            <div class="nav-items">
+                <a href="#">Browse</a>
+                <a href="#">Form</a>
+
+            </div>
+
+        </nav>
+    </header>
+    <section>
+        <div id="signBtns" class="container">
+            <button id="aquarius"><img src="#"></button>
+            <button id="cancer"><img src="#"></button>
+            <button id="taurus"><img src="#"></button>
+            <button id="leo"><img src="#"></button>
+            <button id="aries"><img src="#"></button>
+            <button id="virgo"><img src="#"></button>
+            <button id="scorpio"><img src="#"></button>
+            <button id="saggittarius"><img src="#"></button>
+            <button id="pisces"><img src="#"></button>
+            <button id="gemini"><img src="#"></button>
+            <button id="capricorn"><img src="#"></button>
+            <button id="libra"><img src="#"></button>
         </div>
-</section>
+    </section>
 
 
 
     <section>
-            <form>
-                <label for="name">Enter Your Name</label>
-                <input type="text" id="username" name="name">
-                <label for="bday">Enter birthday</label>
-                <input type="date" id="bday" name="bday">
-            </form>
+        <form id="userForm">
+            <label for="name" class="text-red-600">Enter Your Name</label>
+            <input type="text" id="userName" name="name">
+            <label for="bday">Enter birthday</label>
+            <input type="date" id="bday" name="bday">
+            <button id="submitBtn" for="name">Submit</button>
+        </form>
     </section>
 
     <section id="previous-searches">
-        
+
     </section>
     <footer>
         Coming soon!
     </footer>
-   
 
-    
-    
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="./assets/js/script.js"></script>
 </body>
+
 </html>
