@@ -14,4 +14,11 @@ $("#submitBtn").click(function (e) {
 });
 
 
+$('#aquarius').click(function (e) {
+    e.preventDefault();
+    var aquarius = "aquarius";
+    
+    var resultsPage = "../Astro-music/results.html?q=" + aquarius + '&date=2022-01-21';
 
+    location.assign(resultsPage);
+ });
