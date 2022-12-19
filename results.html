@@ -9,16 +9,19 @@
         integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/dayjs-with-plugins"></script>
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1/plugin/isBetween.js"></script>
+    <link rel="stylesheet" href="./assets/css/style.css">
     <title>Results</title>
 </head>
 
 <body>
 
-    <div id="horoscope-title">
-        <img id="hIconImage" src=" " alt="Horoscope Sign">
-    </div>
+    <div id="horoscope-title"></div>
+    <img id="hIconImage" src=" " alt="Horoscope Sign">
 
-    <div id="music-player"></div>
+
+    <div>
+        <iframe id="music-player" class="hidden" style="border-radius:12px" src=" " width="300" height="380"></iframe>
+    </div>
 
     <div id="daily-horoscope"></div>
 
