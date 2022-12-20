@@ -13,6 +13,14 @@ $("#submitBtn").click(function (e) {
   location.assign(resultsPage);
 });
 
+$('#navSignBtn').click(function (e) {
+    e.preventDefault();
+    var signContainer = $('#signContainer');
+    signContainer.toggleClass('hidden');
+
+   
+})
+
 
 $('#aquarius').click(function (e) {
     e.preventDefault();
@@ -125,6 +133,14 @@ $('#capricorn').click(function (e) {
 
   location.assign(resultsPage);
 });
+
+
+function showPreviousSearch() {
+    var previousDisplay = $('#previous-searches');
+    var previousUser = $('<div>');
+
+    
+}
 
 
 

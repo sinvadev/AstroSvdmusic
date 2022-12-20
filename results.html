@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
         integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/dayjs-with-plugins"></script>
@@ -14,21 +16,26 @@
 </head>
 
 <body>
+    <main>
+        <div id="horoscope-title" class="font-bold text-6xl text-center"></div>
 
-    <div id="horoscope-title"></div>
-    <img id="hIconImage" src=" " alt="Horoscope Sign">
+        <div class="flex flex-col items-center justify-center text-center">
+            <img id="hIconImage" src=" " alt="Horoscope Sign" class="text-right">
 
 
-    <div>
-        <iframe id="music-player" class="hidden" style="border-radius:12px" src=" " width="300" height="380"></iframe>
-    </div>
+            <div>
+                <iframe id="music-player" class="hidden" style="border-radius:12px" src=" " width="300"
+                    height="380"></iframe>
+            </div>
 
-    <div id="daily-horoscope"></div>
+            <div id="daily-horoscope" class="mt-12 text-3xl border-8 border-transparent "></div>
 
-    <a href="./index.html"><input type="button" value="Back Home" /></a>
+            <a href="./index.html"><input type="button" value="Back Home" class="text-3xl hover:text-white hover:bg-slate-400/75 bg-slate-400/50 border-4 border-black mt-8"></a>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="./assets/js/results.js"></script>
+            <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+            <script src="./assets/js/results.js"></script>
+        </div>
+    </main>
 </body>
 
 </html>

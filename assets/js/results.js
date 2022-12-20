@@ -13,15 +13,21 @@ function getUserInput() {
   var uName = userDataArr[0].split("=").pop();
   var uDate = userDataArr[1].split("=").pop();
   localStorage.setItem(uName, uDate);
+  console.log(uName, uDate);
   getHoroscope(uDate);
 }
 getUserInput();
 
 // Takes user date from the getUserInput and assaigns it a horoscope.
 function getHoroscope(uDate) {
+  console.log(uDate);
   uDate = dayjs(uDate).format("MM-DD");
+  console.log(uDate);
 
-  if (dayjs(uDate).isBetween("01-20", dayjs("02-18"))) {
+  if (dayjs(uDate).isBetween("01-01", dayjs("01-19"))) {
+    runApi("capricorn");
+    displayHoroscope("Capricorn");
+  } else if (dayjs(uDate).isBetween("01-20", dayjs("02-18"))) {
     runApi("aquarius");
     displayHoroscope("Aquarius");
   } else if (dayjs(uDate).isBetween("02-19", dayjs("03-20"))) {
@@ -54,7 +60,7 @@ function getHoroscope(uDate) {
   } else if (dayjs(uDate).isBetween("11-22", dayjs("12-21"))) {
     runApi("sagittarius");
     displayHoroscope("Sagittarius");
-  } else if (dayjs(uDate).isBetween("12-22", dayjs("01-19"))) {
+  } else if (dayjs(uDate).isBetween("12-22", dayjs("12-31"))) {
     runApi("capricorn");
     displayHoroscope("Capricorn");
   } else {
@@ -66,7 +72,7 @@ function displayHoroscope(horoscopeSign) {
   titleDisplay.text(horoscopeSign);
 
   var signIconImage = $("#hIconImage");
-  signIconImage.addClass('iconImageDisplay')
+  signIconImage.addClass("iconImageDisplay");
   signIconImage.attr("src", "./assets/images/" + horoscopeSign + ".png");
 }
 
@@ -87,10 +93,16 @@ function runApi(horoscopeSign) {
 
       horoscopeDisplay.html(
         fortune +
+          "<br>" +
+          '<span class="numberEl">' +
           " Your lucky number today is: " +
           luckyNumber +
+          "</span>" +
+          "<br>" +
+          '<span class="dateEl">' +
           " Your lucky hour today will be: " +
-          luckyTime
+          luckyTime +
+          "</span>"
       );
       getPlaylist(mood);
     });
