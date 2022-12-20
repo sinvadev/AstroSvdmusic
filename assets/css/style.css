@@ -14,3 +14,49 @@
     margin: 1%;
 }
 
+.hidden{
+    display: none;
+}
+.signBtn {
+    width: 30px;
+    height: 30px;
+    margin: 1%;
+}
+.iconImageDisplay {
+    width: 40px;
+    height: 40px;
+    margin: 1%;
+}
+h2{
+    font-family: 'Rubik Spray Paint', cursive;
+ margin-left: 180px;
+}
+main{
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    background-size: cover;
+    min-height: 100vh;
+}
+body{
+    min-height: 100vh;
+}
+#submitBtn{
+    font-family: 'Secular One', sans-serif;
+font-size: larger;
+font-weight: bolder;
+}
+#submitBtn:hover{
+   color: #C850C0;
+}
+#formSection{
+   margin-left: 25%;
+   margin-top: 12%;
+}
+footer{
+    color: white;
+    background-color: black;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+}
