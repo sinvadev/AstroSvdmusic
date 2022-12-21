@@ -17,9 +17,12 @@ $('#navSignBtn').click(function (e) {
     e.preventDefault();
     var signContainer = $('#signContainer');
     signContainer.toggleClass('hidden');
-
-   
-})
+});
+$('#aboutMeBtn').click(function (e) {
+    e.preventDefault();
+    var aboutContainer = $('#aboutMe');
+    aboutContainer.toggleClass('hidden');
+});
 
 
 $('#aquarius').click(function (e) {
@@ -134,15 +137,5 @@ $('#capricorn').click(function (e) {
   location.assign(resultsPage);
 });
 
-
-function showPreviousSearch() {
-    var previousDisplay = $('#previous-searches');
-    var previousUser = $('<div>');
-
-    
-}
-
-
-
-window.localStorage.setItem("userForm", "userName","bday")
+// window.localStorage.setItem("userForm", "userName","bday")
 
