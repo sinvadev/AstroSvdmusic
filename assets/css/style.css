@@ -50,7 +50,10 @@ body {
   min-height: 100vh;
 }
 #submitBtn {
+
   font-family: 'Lora', serif;
+
+
   font-size: larger;
   font-weight: bolder;
 }
@@ -73,11 +76,14 @@ footer {
 .numberEl{
     color: #4158d0;
     font-weight: bolder;
+    font-family: 'Times New Roman', Times, serif;
 }
 .dateEl{
     color: #ffcc70;
     font-weight: bolder;
+    font-family: Verdana, Tahoma, sans-serif;
 }
+
 
 
 @media screen and (max-width: 768px) {
@@ -107,3 +113,6 @@ input{
   color: #fff;
   font-size: 1em;
 }
+
+
+
