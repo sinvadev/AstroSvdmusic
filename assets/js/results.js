@@ -10,29 +10,44 @@ var fortune;
 var compatibility;
 var luckyNumber;
 var luckyTime;
+var previousUser;
 
-// Collects user data from initial page, puts it into an array. We then take the info for that array and save it into local storage as well running the getHoroscope function with the date from the array.
 function getUserInput() {
   window.localStorage.setItem("arry", JSON.stringify(uDataArry));
 }
 
-// getUserInput();
-
 function showPreviousSearch() {
-  var currentLocal = JSON.parse(window.localStorage.getItem("arry"));
+  var currentLocal = JSON.parse(window.localStorage.getItem("arry")) || [];
   console.log(currentLocal);
   currentLocal.push(uName, uDate);
   uDataArry = currentLocal;
 
   console.log(uDataArry);
   getUserInput();
+
+  var previousDisplay = $("#previous-searches");
+
+  for (let i = 0; i < uDataArry.length; i++) {
+    if (i % 2 === 0) {
+      var previousBtn = $("<button>");
+      var previousDate = dayjs(uDataArry[i + 1]).format("MMM-DD-YYYY");
+      previousBtn.addClass(
+        "previousUserBtn border-8 border-slate-600 bg-red-400 h-16 m-2 w-fit text-1xl text-center"
+      );
+
+      previousBtn.html(uDataArry[i] + "<br>" + previousDate);
+      previousDisplay.append(previousBtn);
+    }
+  }
+
+  $(".previousUserBtn").click(function () {
+    getHoroscope(this.innerHTML.split('<br>')[1]);
+  });
 }
+
 showPreviousSearch();
 
-
-
 getHoroscope(uDate);
-
 
 // Takes user date from the getUserInput and assaigns it a horoscope.
 function getHoroscope(uDate) {
@@ -40,7 +55,10 @@ function getHoroscope(uDate) {
   uDate = dayjs(uDate).format("MM-DD");
   console.log(uDate);
 
-  if (dayjs(uDate).isBetween("01-01", dayjs("01-20"))) {
+  if (uDate == "01-01") {
+    runApi("capricorn");
+    displayHoroscope("Capricorn");
+  } else if (dayjs(uDate).isBetween("01-01", dayjs("01-20"))) {
     runApi("capricorn");
     displayHoroscope("Capricorn");
   } else if (dayjs(uDate).isBetween("01-19", dayjs("02-19"))) {
@@ -55,10 +73,10 @@ function getHoroscope(uDate) {
   } else if (dayjs(uDate).isBetween("04-19", dayjs("05-21"))) {
     runApi("taurus");
     displayHoroscope("Taurus");
-  } else if (dayjs(uDate).isBetween("05-20", dayjs("06-21"))) {
+  } else if (dayjs(uDate).isBetween("05-20", dayjs("06-22"))) {
     runApi("gemini");
     displayHoroscope("Gemini");
-  } else if (dayjs(uDate).isBetween("06-22", dayjs("07-23"))) {
+  } else if (dayjs(uDate).isBetween("06-21", dayjs("07-23"))) {
     runApi("cancer");
     displayHoroscope("Cancer");
   } else if (dayjs(uDate).isBetween("07-22", dayjs("08-23"))) {
@@ -77,6 +95,9 @@ function getHoroscope(uDate) {
     runApi("sagittarius");
     displayHoroscope("Sagittarius");
   } else if (dayjs(uDate).isBetween("12-21", dayjs("12-31"))) {
+    runApi("capricorn");
+    displayHoroscope("Capricorn");
+  } else if (uDate === "12-31") {
     runApi("capricorn");
     displayHoroscope("Capricorn");
   } else {

@@ -7,7 +7,6 @@ $("#submitBtn").click(function (e) {
   var selection = userName.val().trim();
   var selectionDate = userDay.val();
 
-
   var resultsPage = "../Astro-music/results.html?q=" + selection + '&date=' + selectionDate;
 
   location.assign(resultsPage);

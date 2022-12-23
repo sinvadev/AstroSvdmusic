@@ -11,7 +11,7 @@
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1/plugin/isBetween.js"></script>
     <link rel="stylesheet" href="./assets/css/style.css">
 
-    <title>Astro music</title>
+    <title>AstroMusic</title>
 </head>
 
 <body>
@@ -19,9 +19,9 @@
         <header class="bg-purple-500 flex justify-evenly">
             <h2 class="text-7xl">AstroMusic</h2>
             <nav class="mt-5">
-                <a id="navSignBtn"
+                <button id="navSignBtn"
                     class="hover:text-white hover:bg-slate-400/75 bg-slate-400/50 border-4 border-black text-2xl m-2 mr-8">Pick
-                    Your Sign</a>
+                    Your Sign</button>
                 <button id="aboutMeBtn"
                     class="hover:text-white hover:bg-slate-400/75 bg-slate-400/50 border-4 border-black text-2xl m-2 mr-8">About
                     Us</button>
@@ -33,7 +33,7 @@
            <b>AstroMusic</b> is here to help connect you to your daily horoscope and discover some new music using your astrological sign! We've carefully currated a playlist based off of your mood and have discovered your lucky hour and number for the day!
         </section>
         <section id="signContainer" class="w-2/5 bg-gradient-to-r from-sky-500 to-indigo-500 ml-96 mt-7 hidden">
-            <div class="signs-container">
+            <div class="signs-container ml-12">
                 <button class="signBtn hover:animate-bounce" id="aquarius"><img
                         src="./assets/images/Aquarius.png"></button>
                 <button class="signBtn hover:animate-bounce" id="cancer"><img src="./assets/images/Cancer.png"></button>
@@ -43,7 +43,7 @@
                 <button class="signBtn hover:animate-bounce" id="virgo"><img src="./assets/images/Virgo.png"></button>
                 <button class="signBtn hover:animate-bounce" id="scorpio"><img
                         src="./assets/images/Scorpio.png"></button>
-                <button class="signBtn hover:animate-bounce" id="saggittarius"><img
+                <button class="signBtn hover:animate-bounce" id="sagittarius"><img
                         src="./assets/images/Sagittarius.png"></button>
                 <button class="signBtn hover:animate-bounce" id="pisces"><img src="./assets/images/Pisces.png"></button>
                 <button class="signBtn hover:animate-bounce" id="gemini"><img src="./assets/images/Gemini.png"></button>
@@ -67,9 +67,6 @@
             </form>
         </section>
 
-        <section id="previous-searches">
-            <div id="previousUser" class="hidden border-8 border-slate-600 bg-red-400 h-12 w-1/4 text-1xl text-center"></div>
-        </section>
 
         <footer class="">
             Coming soon!
