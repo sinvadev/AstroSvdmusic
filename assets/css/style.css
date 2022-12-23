@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanalei+Fill&family=Rubik+Puddles&family=Rubik+Spray+Paint&display=swap');
+
+
+
 .hidden {
   display: none;
 }
@@ -28,7 +32,8 @@
   margin: 1%;
 }
 h2 {
-  font-family: "Rubik Spray Paint", cursive;
+  font-family: 'Rubik Puddles', cursive;
+
   margin-left: 180px;
 }
 main {
@@ -45,6 +50,10 @@ body {
   min-height: 100vh;
 }
 #submitBtn {
+
+  font-family: 'Lora', serif;
+
+
   font-size: larger;
   font-weight: bolder;
 }
@@ -75,7 +84,35 @@ footer {
     font-family: Verdana, Tahoma, sans-serif;
 }
 
+
+
 @media screen and (max-width: 768px) {
-    section {
-      width: 100%;
-    }}
+  section {
+    width: 100%;
+  }}
+
+  h2{
+    justify-content: center;
+   display: flex;
+  align-items: center;
+ 
+  }
+  
+#userForm{
+  position: relative;
+  width: 250px;
+}
+
+input{
+  width: 100%;
+  padding: 10px;
+  border: 1px solid rgba(255,255,255,0,25);
+  background: #1d2b3a;
+  border-radius: 5px;
+  outline: none;
+  color: #fff;
+  font-size: 1em;
+}
+
+
+
