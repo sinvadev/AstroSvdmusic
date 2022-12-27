@@ -22,8 +22,8 @@
   display: none;
 }
 .signBtn {
-  width: 30px;
-  height: 30px;
+  width: 60px;
+  height: 60px;
   margin: 1%;
 }
 .iconImageDisplay {
@@ -33,16 +33,13 @@
 }
 h2 {
   font-family: 'Rubik Puddles', cursive;
-
+  font-weight: bolder;
+  color: white;
   margin-left: 180px;
 }
 main {
-  background-image: linear-gradient(
-    43deg,
-    #4158d0 0%,
-    #c850c0 46%,
-    #ffcc70 100%
-  );
+  background-color: #FF6B1C;
+  background-image: linear-gradient(324deg, #FF6B1C 37%, #FAD961 69%);
   background-size: cover;
   min-height: 100vh;
 }
@@ -50,15 +47,13 @@ body {
   min-height: 100vh;
 }
 #submitBtn {
-
   font-family: 'Lora', serif;
-
-
   font-size: larger;
   font-weight: bolder;
 }
 #submitBtn:hover {
-  color: #c850c0;
+  color: white;
+  background-color: #1d2b3a;
 }
 #formSection {
   margin-left: 25%;
@@ -79,9 +74,17 @@ footer {
     font-family: 'Times New Roman', Times, serif;
 }
 .dateEl{
-    color: #ffcc70;
+    color: #000000;
     font-weight: bolder;
     font-family: Verdana, Tahoma, sans-serif;
+}
+
+.testClass {
+  opacity: 0;
+}
+
+.signBtn:hover span {
+  opacity: 1;
 }
 
 

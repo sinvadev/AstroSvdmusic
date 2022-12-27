@@ -32,7 +32,7 @@ function showPreviousSearch() {
       var previousBtn = $("<button>");
       var previousDate = dayjs(uDataArry[i + 1]).format("MMM-DD-YYYY");
       previousBtn.addClass(
-        "previousUserBtn border-8 border-slate-600 bg-red-400 h-16 m-2 w-fit text-1xl text-center"
+        "previousUserBtn border-4 border-slate-800 border-solid bg-rose-500 h-16 m-2 w-fit text-1xl text-center"
       );
 
       previousBtn.html(uDataArry[i] + "<br>" + previousDate);
