@@ -1,67 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/style.css"
+    <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="./assets/script.js"></script>
-  
-    <title>Astro music</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Spray+Paint&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/plugin/isBetween.js"></script>
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <title>AstroMusic</title>
 </head>
+
 <body>
-    <header>
-        <h2>Astro music</h2>
- 
-    <nav>
-  
-        <div class="nav-items">
-            <a href="/">Browse</a>
-            <a href="/">Form</a>
+    <main>
 
-        </div>
-
-    </nav>
-</header>
-<section>
-    <div class="signs-container">
-        <div id="signs">
-          <button id="aquarius"><img src="aquarius.png"></button> 
-          <button id="cancer"><img src="aquarius.png"></button> 
-          <button id="taurus"><img src="aquarius.png"></button> 
-          <button id="leo"><img src="aquarius.png"></button> 
-          <button id="aries"><img src="aquarius.png"></button> 
-          <button id="virgo"><img src="aquarius.png"></button> 
-          <button id="scorpio"><img src="aquarius.png"></button> 
-          <button id="saggittarius"><img src="aquarius.png"></button> 
-          <button id="pisces"><img src="aquarius.png"></button> 
-          <button id="gemini"><img src="aquarius.png"></button> 
-          <button id="capricorn"><img src="aquarius.png"></button> 
-          <button id="libra"><img src="aquarius.png"></button> 
-        </div>
-</section>
-
-
-
-    <section>
-            <form>
-                <label for="name">Enter Your Name</label>
-                <input type="text" id="username" name="name">
-                <label for="bday">Enter birthday</label>
-                <input type="date" id="bday" name="bday">
-            </form>
-    </section>
-
-    <section id="previous-searches">
+        <header class="bg-black flex justify-evenly">
+            <h2 class="text-7xl">AstroMusic</h2>
+            <nav class="mt-5">
+                <button id="aboutMeBtn"
+                    class="hover:text-black text-white hover:bg-orange-400 bg-slate-400/50 border-4 border-black text-2xl m-2 mr-8 border-double shadow-md cursor-pointer ">About
+                    Us</button>
+                <button id="navSignBtn"
+                    class="hover:text-black text-white hover:bg-orange-400 bg-slate-400/50 border-4 border-black border-double text-2xl shadow-md cursor-pointer m-2  mr-8">Pick
+                    Your Sign</button>
+            </nav>
+        </header>
         
-    </section>
-    <footer>
-        Coming soon!
-    </footer>
-   
+        <section id="signContainer" class="ml-64 mt-7 hidden">
 
-    
-    
+            <div class="signs-container ml-2">
+
+                <button
+                    class="signBtn rounded hover:animate-bounce bg-gradient-to-r from-sky-500 to-indigo-500 text-xl text-center"
+                    id="aquarius"><img src="./assets/images/Aquarius.png"> <span class="testClass">Aquarius</span>
+                </button>
+                <button
+                    class="signBtn rounded hover:animate-bounce bg-gradient-to-r from-zinc-500 to-gray-200 text-xl text-center"
+                    id="cancer"><img src="./assets/images/Cancer.png"><span class="testClass">Cancer</span> </button>
+                <button
+                    class="signBtn rounded hover:animate-bounce bg-gradient-to-r from-green-500 to-lime-200 text-xl text-center"
+                    id="taurus"><img src="./assets/images/Taurus.png"> <span class="testClass">Taurus</span> </button>
+                <button
+                    class="signBtn rounded hover:animate-bounce bg-gradient-to-r from-red-600 to-red-200 text-xl text-center"
+                    id="aries"><img src="./assets/images/Aries.png"> <span class="testClass">Aries</span> </button>
+                <button
+                    class="signBtn rounded hover:animate-bounce bg-gradient-to-r from-lime-800 to-amber-200 text-xl text-center"
+                    id="virgo"><img src="./assets/images/Virgo.png"><span class="testClass">Virgo</span> </button>
+                <button
+                    class="signBtn rounded hover:animate-bounce bg-gradient-to-r from-violet-500 to-purple-200 text-xl text-center"
+                    id="sagittarius"><img src="./assets/images/Sagittarius.png"> <span
+                        class="testClass">Sagittarius</span> </button>
+                <button
+                    class="signBtn rounded hover:animate-bounce bg-gradient-to-r from-green-400 to-lime-200 text-xl text-center"
+                    id="pisces"><img src="./assets/images/Pisces.png"><span class="testClass">Pisces</span> </button>
+                <button
+                    class="signBtn rounded hover:animate-bounce bg-gradient-to-r from-orange-400 to-orange-100 text-xl text-center"
+                    id="gemini"><img src="./assets/images/Gemini.png"><span class="testClass">Gemini</span> </button>
+                <button
+                    class="signBtn rounded hover:animate-bounce bg-gradient-to-r from-zinc-600 to-amber-200 text-xl text-center"
+                    id="capricorn"><img src="./assets/images/Capricorn.png"><span class="testClass">Capricorn</span>
+                </button>
+                <button
+                    class="signBtn rounded hover:animate-bounce bg-gradient-to-r from-pink-300 to-blue-400 text-xl text-center"
+                    id="libra"><img src="./assets/images/Libra.png"><span class="testClass">Libra</span> </button>
+                <button
+                    class="signBtn rounded hover:animate-bounce bg-gradient-to-r from-yellow-500 to-amber-200 text-xl text-center"
+                    id="leo"><img src="./assets/images/Leo.png"> <span class="testClass">Leo</span> </button>
+                <button
+                    class="signBtn rounded hover:animate-bounce bg-gradient-to-r from-zinc-400 to-stone-600 text-xl text-center"
+                    id="scorpio"><img src="./assets/images/Scorpio.png"><span class="testClass">Scorpio</span> </button>
+            </div>
+        </section>
+
+
+        <section id="formSection"
+            class="border-8 border-red-800 border-double bg-rose-500 h-96 w-1/2 text-2xl flex items-center justify-center text-center">
+            <section id="aboutMe"
+            class="border-8 border-black border-solid bg-orange-300 w-2/3 text-2xl text-center hidden">
+            <b>AstroMusic</b> is here to help connect you to your daily horoscope and discover some new music using your
+            astrological sign! We've carefully currated a playlist based off of your mood and have discovered your lucky
+            hour and number for the day!
+        </section>
+
+            <form id="userForm" class="">
+                <label for="name" id="nameForm"
+                    class="capitalize hover:uppercase hover:text-white font-sans md:font-serif italic  ">Enter Your
+                    Name</label>
+                <input type="text" class="m-3 bg-slate-200" id="userName" name="name" placeholder="Your name here">
+                <br>
+                <label for="bday" id="bdayForm"
+                    class="capitalize hover:uppercase hover:text-white font-sans md:font-serif italic  ">Enter
+                    birthday</label>
+                <input type="date" class="m-3 bg-slate-200  " id="bday" name="bday">
+                <br>
+                <button id="submitBtn"
+                    class="h-14 bg-gradient-to-r from-sky-500 to-indigo-500 m-3 rounded-lg border-4 border-double shadow-md cursor-pointer shadow-black border-indigo-600"
+                    for="name">Submit</button>
+            </form>
+        </section>
+
+        <footer class="">
+            AstroDevs™ Thanks for checking us out! 
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="./assets/js/script.js"></script>
+
+    </main>
 </body>
+
 </html>

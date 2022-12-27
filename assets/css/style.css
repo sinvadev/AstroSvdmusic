@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanalei+Fill&family=Rubik+Puddles&family=Rubik+Spray+Paint&display=swap');
+
+
+
+.hidden {
+  display: none;
+}
+
+.signBtn {
+  width: 30px;
+  height: 30px;
+  margin: 1%;
+}
+
+.iconImageDisplay {
+  width: 40px;
+  height: 40px;
+  margin: 1%;
+}
+
+.hidden {
+  display: none;
+}
+.signBtn {
+  width: 60px;
+  height: 60px;
+  margin: 1%;
+}
+.iconImageDisplay {
+  width: 40px;
+  height: 40px;
+  margin: 1%;
+}
+h2 {
+  font-family: 'Rubik Puddles', cursive;
+  font-weight: bolder;
+  color: white;
+  margin-left: 180px;
+}
+main {
+  background-color: #FF6B1C;
+  background-image: linear-gradient(324deg, #FF6B1C 37%, #FAD961 69%);
+  background-size: cover;
+  min-height: 100vh;
+}
+body {
+  min-height: 100vh;
+}
+#submitBtn {
+  font-family: 'Lora', serif;
+  font-size: larger;
+  font-weight: bolder;
+}
+#submitBtn:hover {
+  color: white;
+  background-color: #1d2b3a;
+}
+#formSection {
+  margin-left: 25%;
+  margin-top: 12%;
+}
+footer {
+  color: white;
+  background-color: black;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
+}
+.numberEl{
+    color: #4158d0;
+    font-weight: bolder;
+    font-family: 'Times New Roman', Times, serif;
+}
+.dateEl{
+    color: #000000;
+    font-weight: bolder;
+    font-family: Verdana, Tahoma, sans-serif;
+}
+
+.testClass {
+  opacity: 0;
+}
+
+.signBtn:hover span {
+  opacity: 1;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  section {
+    width: 100%;
+  }}
+
+  h2{
+    justify-content: center;
+   display: flex;
+  align-items: center;
+ 
+  }
+  
+#userForm{
+  position: relative;
+  width: 250px;
+}
+
+input{
+  width: 100%;
+  padding: 10px;
+  border: 1px solid rgba(255,255,255,0,25);
+  background: #1d2b3a;
+  border-radius: 5px;
+  outline: none;
+  color: #fff;
+  font-size: 1em;
+}
+
+
+
